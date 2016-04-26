@@ -9,7 +9,7 @@
 #
 @App ||= {}
 <% if Rails.env.production? %>
-App.cable = ActionCable.createConsumer('wss://action-cable-spaceshipppp.herokuapp.com/')
+App.cable = ActionCable.createConsumer('wss://action-cable-spaceshipppp.herokuapp.com/cable')
 <% else %>
 App.cable = ActionCable.createConsumer('/cable')
 <% end %>
