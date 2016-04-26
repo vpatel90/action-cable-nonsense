@@ -2,6 +2,11 @@
 production:
   adapter: redis
   url: ENV["REDISTOGO_URL"]
+  host: lab.redistogo.com
+  password: ENV["REDISTOGO_PASSWORD"]
+  port: 10329
+  inline: true
+  timeout: 1
 
 development:
   adapter: async
