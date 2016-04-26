@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<h1 id='messages'>Messages (<%= @messages.count %>)</h1>
+
+<div id='chat-room'>
+  <% @messages.each do |message| %>
+    <div class='message'>
+      <div class='author'><%= message.user.username %></div>
+      <div class='body'><%= message.body %></div>
+    </div>
+  <% end %>
+</div>
+
+<hr>
+
+<%= render 'form', message: Message.new %>
+
+<script type='text/javascript'>
+  $('#chat-room').scrollTop($('#chat-room')[0].scrollHeight);
+</script>
