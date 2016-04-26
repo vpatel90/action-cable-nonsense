@@ -8,4 +8,8 @@
 #= require_tree ./channels
 #
 @App ||= {}
+<% if Rails.env.production? %>
+App.cable = ActionCable.createConsumer('wss://action-cable-spaceshipppp.herokuapp.com/')
+<% else %>
 App.cable = ActionCable.createConsumer('/cable')
+<% end %>
