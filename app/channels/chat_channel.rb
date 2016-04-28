@@ -7,3 +7,4 @@ class ChatChannel < ApplicationCable::Channel
     ActionCable.server.broadcast "chat", data
   end
 end
+#thsaudhas
